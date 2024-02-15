@@ -1,0 +1,57 @@
+---
+title: Toaster
+---
+
+This component renders all the toasts, you can place it anywhere in your app.
+
+## Customization
+
+### Expand
+
+Toasts will collapse by default and expand only when you hover on one of them. You are able to modify this behaviour by setting the `expand` prop to `true`, and customize it even further with the `visibleToasts` prop.
+
+```tsx
+<Toaster expand visibleToasts={9} />
+```
+
+### Position
+
+Set the place where the toast will be rendered.
+
+```tsx
+// Available positions:
+// top-left, top-center, top-right, bottom-left, bottom-center, bottom-right
+<Toaster position="bottom-right" />
+```
+
+### Styling all toasts
+
+You can customzie all toasts at once with `toastOptions` prop. These options will act as the default for all toasts.
+
+```tsx
+<Toaster
+  toastOptions={{
+    style: { background: 'red' },
+    className: 'my-toast',
+  }}
+/>
+```
+
+## API Reference
+| Property              |                                                           Description                                                           |                             Default |
+| :-------------------- | :-----------------------------------------------------------------------------------------------------------------------------: | ----------------------------------: |
+| theme                 |                                       Toast's theme, either `light`, `dark`, or `system`                                        |                             `light` |
+| richColors            |                                           Makes error and success state more colorful                                           |                             `false` |
+| expand                |                                               Toasts will be expanded by default                                                |                             `false` |
+| visibleToasts         |                                                    Amount of visible toasts                                                     |                                 `3` |
+| position              |                                             Place where the toasts will be rendered                                             |                      `bottom-right` |
+| closeButton           |                                                Adds a close button to all toasts                                                |                             `false` |
+| offset                |                                              Offset from the edges of the screen.                                               |                              `32px` |
+| dir                   |                                                 Directionality of toast's text                                                  |                               `ltr` |
+| invert                |                                            Dark toasts in light mode and vice versa.                                            |                             `false` |
+| gap                   |                                                Gap between toasts when expanded                                                 |                                `14` |
+| loadingIcon           |                                                Changes the default loading icon                                                 |                                 `-` |
+
+{/* | icons                 |                                                    Changes the default icons                                                    |                                 `-` |
+| toastOptions          |               These will act as default options for all toasts. See [toast()](/toast) for all available options.                |                              `4000` |
+| hotkey                |                                   Keyboard shortcut that will move focus to the toaster area.                                   |                         `⌥/alt + T` | */}

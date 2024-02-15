@@ -1,0 +1,19 @@
+{
+  "name": "solid-sonner-toast-repo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "dev:sonner": "turbo dev --filter=solid-sonner-toast",
+    "dev:website": "turbo dev --filter=website",
+    "build:sonner": "turbo build --filter=solid-sonner-toast"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.1",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "turbo": "^1.11.3",
+    "eslint": "^8"
+  }
+}

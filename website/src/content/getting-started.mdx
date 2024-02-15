@@ -1,0 +1,68 @@
+---
+title: Getting Started
+---
+
+import Tabs, { Tab } from '../components/tabs'
+
+solid-sonner-toast is an unofficial port of [Sonner](https://sonner.emilkowal.ski/) for Solid.js.
+
+## Install
+
+<Tabs items={['pnpm', 'npm', 'yarn']}>
+  <Tab value="pnpm">
+    ```sh 
+      pnpm i solid-sonner-toast 
+    ```
+  </Tab>
+  <Tab value="yarn">
+    ```sh 
+      yarn solid-sonner-toast 
+    ```
+  </Tab>
+  <Tab value="npm">
+    ```sh 
+      npm i solid-sonner-toast 
+    ```
+  </Tab>
+</Tabs>
+
+## Add Toaster to your App
+
+You can place the `<Toaster />` component anywhere in your app, such as App.tsx
+
+```tsx App.tsx
+// @refresh reload
+import { Suspense } from 'solid-js'
+import { Toaster } from 'solid-sonner-toast'
+
+import { Router } from '@solidjs/router'
+import { FileRoutes } from '@solidjs/start'
+
+import './app.css'
+import BaseLayout from './components/base-layout'
+
+export default function App() {
+  return (
+    <Router
+      root={(props) => (
+        <BaseLayout>
+          <Suspense>{props.children}</Suspense>
+        </BaseLayout>
+      )}
+    >
+      <Toaster />
+      <FileRoutes />
+    </Router>
+  )
+}
+```
+
+## Render a toast
+Use `toast()` to render a toast
+```tsx
+import { toast } from 'solid-sonner-toast'
+
+const Button = () => {
+  return <button onClick={() => toast('Hello world')}>Hello world</button>
+}
+```
