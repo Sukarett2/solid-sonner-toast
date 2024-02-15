@@ -5,6 +5,7 @@ const presetOptions: preset.PresetOptions = {
   entries: {
     entry: 'src/index.ts',
   },
+  cjs: true,
 }
 
 export default defineConfig((config) => {
@@ -21,16 +22,5 @@ export default defineConfig((config) => {
     preset.writePackageJson(packageFields)
   }
 
-  const options = preset.generateTsupOptions(parsedData)
-
-  return options.map((option) => ({
-    ...option,
-    sourcemap: true,
-    clean: true,
-    format: ['cjs', 'esm'],
-    external: ['solid-js'],
-    dts: true,
-    minify: true,
-    injectStyle: true,
-  }))
+  return preset.generateTsupOptions(parsedData)
 })

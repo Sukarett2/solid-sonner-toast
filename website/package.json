@@ -14,7 +14,7 @@
     "@vinxi/plugin-mdx": "^3.6.7",
     "clsx": "^2.1.0",
     "solid-js": "^1.8.11",
-    "solid-sonner-toast": "0.0.1",
+    "solid-sonner-toast": "0.0.2-0",
     "tailwind-merge": "^2.2.1",
     "unified": "^11.0.4",
     "vinxi": "^0.1.4"

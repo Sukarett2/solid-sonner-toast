@@ -1,8 +1,8 @@
 {
     "name": "solid-sonner-toast",
     "type": "module",
-    "version": "0.0.1",
-    "main": "./dist/index.js",
+    "version": "0.0.2-1",
+    "main": "./dist/index.cjs",
     "module": "./dist/index.js",
     "browser": {},
     "typesVersions": {},
@@ -10,20 +10,16 @@
         "import": {
             "types": "./dist/index.d.ts",
             "default": "./dist/index.js"
+        },
+        "require": {
+            "types": "./dist/index.d.cts",
+            "default": "./dist/index.cjs"
         }
     },
     "types": "./dist/index.d.ts",
     "scripts": {
         "build": "tsup",
         "dev": "tsup src/index.tsx --watch"
-    },
-    "tsup": {
-        "entry": [
-            "src/index.ts"
-        ],
-        "splitting": false,
-        "sourcemap": true,
-        "clean": true
     },
     "files": [
         "dist/"
