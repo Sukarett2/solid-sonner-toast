@@ -58,8 +58,8 @@ importers:
         specifier: ^1.8.11
         version: 1.8.11
       solid-sonner-toast:
-        specifier: 0.0.2-2
-        version: 0.0.2-2(solid-js@1.8.11)
+        specifier: 0.0.2-3
+        version: 0.0.2-3(solid-js@1.8.11)
       tailwind-merge:
         specifier: ^2.2.1
         version: 2.2.1
@@ -7959,8 +7959,8 @@ packages:
       solid-js: 1.8.11
     dev: false
 
-  /solid-sonner-toast@0.0.2-2(solid-js@1.8.11):
-    resolution: {integrity: sha512-J3y4u0DHHsBlsBRPJPXqABsoSESUkCnQd5g327vj19CI8IjB6x6XuicTx82Nq5XTKDHO5x53cvQmfZYQEbUu7Q==}
+  /solid-sonner-toast@0.0.2-3(solid-js@1.8.11):
+    resolution: {integrity: sha512-Nk8lm+NnUNFBDOLxc2ivLNOnFkHEcZPr435nBpk8ltMmdah8rbcI9LG17Uu6EVxComFLnq1SE1x1ShdSp8mj5Q==}
     peerDependencies:
       solid-js: ^1.6.0
     dependencies:

@@ -1,30 +1,87 @@
-# SolidStart
+# solid-sonner-toast
 
-Everything you need to build a Solid project, powered by [`solid-start`](https://start.solidjs.com);
+**This is an unofficial port of [sonner](https://sonner.emilkowal.ski/) for Solid.js, just for learning and interest. And there is already a port called [solid sonner](https://solid-sonner.vercel.app/)**
 
-## Creating a project
+I'm pleased if you still want to try it out and here is the [document](https://solid-sonner-toast-website.vercel.app/) built with solid-start.
 
-```bash
-# create a new project in the current directory
-npm init solid@latest
+# Getting started
 
-# create a new project in my-app
-npm init solid@latest my-app
+## Install
+
+```sh 
+pnpm i solid-sonner-toast 
 ```
 
-## Developing
+## Add Toaster to your App
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```tsx App.tsx
+// @refresh reload
+import { Suspense } from 'solid-js'
+import { Toaster } from 'solid-sonner-toast'
 
-```bash
-npm run dev
+import { Router } from '@solidjs/router'
+import { FileRoutes } from '@solidjs/start'
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+import './app.css'
+import BaseLayout from './components/base-layout'
+
+export default function App() {
+  return (
+    <Router
+      root={(props) => (
+        <BaseLayout>
+          <Suspense>{props.children}</Suspense>
+        </BaseLayout>
+      )}
+    >
+      <Toaster />
+      <FileRoutes />
+    </Router>
+  )
+}
 ```
 
-## Building
+## Render a toast
+Use `toast()` to render a toast
+```tsx
+import { toast } from 'solid-sonner-toast'
 
-Solid apps are built with _adapters_, which optimise your project for deployment to different environments.
+const Button = () => {
+  return <button onClick={() => toast('Hello world')}>Hello world</button>
+}
+```
 
-By default, `npm run build` will generate a Node app that you can run with `npm start`. To use a different adapter, add it to the `devDependencies` in `package.json` and specify in your `vite.config.js`.
+
+# toast()
+
+| Property           |                                              Description                                               |        Default |
+| :----------------- | :----------------------------------------------------------------------------------------------------: | -------------: |
+| description        |                           Toast's description, renders underneath the title.                           |            `-` |
+| position           |                                         Position of the toast.                                         | `bottom-right` |
+| duration           |            Time in milliseconds that should elapse before automatically closing the toast.             |         `4000` |
+| dismissible        |                     If `false`, it'll prevent the user from dismissing the toast.                      |         `true` |
+| icon               |                      Icon displayed in front of toast's text, aligned vertically.                      |            `-` |
+| action             |                      Renders a primary button, clicking it will close the toast.                       |            `-` |
+| cancel             |                     Renders a secondary button, clicking it will close the toast.                      |            `-` |
+| id                 |                                        Custom id for the toast.                                        |            `-` |
+| onDismiss          |       The function gets called when either the close button is clicked, or the toast is swiped.        |            `-` |
+| onAutoClose        | Function that gets called when the toast disappears automatically after it's timeout (duration` prop). |            `-` |
+| unstyled           |                  Removes the default styling, which allows for easier customization.                   |        `false` |
+| actionButtonStyles |                                      Styles for the action button                                      |           `{}` |
+| cancelButtonStyles |                                      Styles for the cancel button                                      |           `{}` |
+
+# Toaster
+
+| Property              |                                                           Description                                                           |                             Default |
+| :-------------------- | :-----------------------------------------------------------------------------------------------------------------------------: | ----------------------------------: |
+| theme                 |                                       Toast's theme, either `light`, `dark`, or `system`                                        |                             `light` |
+| richColors            |                                           Makes error and success state more colorful                                           |                             `false` |
+| expand                |                                               Toasts will be expanded by default                                                |                             `false` |
+| visibleToasts         |                                                    Amount of visible toasts                                                     |                                 `3` |
+| position              |                                             Place where the toasts will be rendered                                             |                      `bottom-right` |
+| closeButton           |                                                Adds a close button to all toasts                                                |                             `false` |
+| offset                |                                              Offset from the edges of the screen.                                               |                              `32px` |
+| dir                   |                                                 Directionality of toast's text                                                  |                               `ltr` |
+| invert                |                                            Dark toasts in light mode and vice versa.                                            |                             `false` |
+| gap                   |                                                Gap between toasts when expanded                                                 |                                `14` |
+| loadingIcon           |                                                Changes the default loading icon                                                 |                                 `-` |
