@@ -8,6 +8,9 @@ import pkg from '@vinxi/plugin-mdx'
 const { default: mdx } = pkg
 export default defineConfig({
   start: {
+    server: {
+      preset: 'vercel',
+    },
     extensions: ['mdx', 'md'],
   },
   plugins: [

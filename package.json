@@ -7,8 +7,9 @@
     "dev": "turbo dev",
     "build": "turbo build",
     "dev:sonner": "turbo dev --filter=solid-sonner-toast",
+    "build:sonner": "turbo build --filter=solid-sonner-toast",
     "dev:website": "turbo dev --filter=website",
-    "build:sonner": "turbo build --filter=solid-sonner-toast"
+    "build:website": "turbo build --filter=website"
   },
   "devDependencies": {
     "prettier": "^3.2.1",
