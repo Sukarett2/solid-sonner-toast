@@ -10,6 +10,9 @@ export default defineConfig({
   start: {
     server: {
       preset: 'vercel',
+      prerender: {
+        routes: ['/example', '/docs/getting-started'],
+      },
     },
     extensions: ['mdx', 'md'],
   },
