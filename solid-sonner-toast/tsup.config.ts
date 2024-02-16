@@ -25,5 +25,7 @@ export default defineConfig((config) => {
   return preset.generateTsupOptions(parsedData).map((option) => ({
     ...option,
     injectStyle: true,
+    minify: true,
+    sourcemap: true
   }))
 })

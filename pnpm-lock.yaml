@@ -42,6 +42,9 @@ importers:
       '@mdx-js/rollup':
         specifier: ^3.0.0
         version: 3.0.0(rollup@4.9.6)
+      '@solidjs/meta':
+        specifier: ^0.29.3
+        version: 0.29.3(solid-js@1.8.11)
       '@solidjs/router':
         specifier: ^0.10.9
         version: 0.10.9(solid-js@1.8.11)
@@ -58,8 +61,8 @@ importers:
         specifier: ^1.8.11
         version: 1.8.11
       solid-sonner-toast:
-        specifier: 0.0.2-3
-        version: 0.0.2-3(solid-js@1.8.11)
+        specifier: 0.0.2-4
+        version: 0.0.2-4(solid-js@1.8.11)
       tailwind-merge:
         specifier: ^2.2.1
         version: 2.2.1
@@ -2838,6 +2841,14 @@ packages:
   /@sindresorhus/merge-streams@1.0.0:
     resolution: {integrity: sha512-rUV5WyJrJLoloD4NDN1V1+LDMDWOa4OTsT4yYJwQNpTU6FWxkxHpL7eu4w+DmiH8x/EAM1otkPE1+LaspIbplw==}
     engines: {node: '>=18'}
+    dev: false
+
+  /@solidjs/meta@0.29.3(solid-js@1.8.11):
+    resolution: {integrity: sha512-R2uirgjgyh3FPFh+rb840plF701N6GvM5w81/QeI61QwjXb4QzLkyI/uzXfC5UW8favpUn9KK9ILQeoTl6pX0A==}
+    peerDependencies:
+      solid-js: '>=1.8.4'
+    dependencies:
+      solid-js: 1.8.11
     dev: false
 
   /@solidjs/router@0.10.9(solid-js@1.8.11):
@@ -7959,8 +7970,8 @@ packages:
       solid-js: 1.8.11
     dev: false
 
-  /solid-sonner-toast@0.0.2-3(solid-js@1.8.11):
-    resolution: {integrity: sha512-Nk8lm+NnUNFBDOLxc2ivLNOnFkHEcZPr435nBpk8ltMmdah8rbcI9LG17Uu6EVxComFLnq1SE1x1ShdSp8mj5Q==}
+  /solid-sonner-toast@0.0.2-4(solid-js@1.8.11):
+    resolution: {integrity: sha512-nDjCA5q6KJ8lqRj7b9i4EVpEoibILXkmY298mQ2GhO7bCAR5Ake8ij2fHfWSzHcZ/1RKdGkAz7QBGjA0VAdl1A==}
     peerDependencies:
       solid-js: ^1.6.0
     dependencies:
