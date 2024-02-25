@@ -34,6 +34,7 @@ import * as runtime from 'solid-jsx'
 const components = {
   a: (props: any) => <a {...props}>{props?.children}</a>,
   code: (props: any) => <code {...props}>{props?.children}</code>,
+  strong: (props: any) => <strong {...props}>{props?.children}</strong>,
   figcaption: (props: any) => <figcaption {...props}>{props?.children}</figcaption>,
   figure: (props: any) => <figure {...props}>{props?.children}</figure>,
   h1: (props: any) => <h1 {...props}>{props?.children}</h1>,

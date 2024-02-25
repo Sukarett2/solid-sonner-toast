@@ -18,9 +18,9 @@ import { injectMDXData, renderMDXData } from './mdx-plugins'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-const contentFiles = readdirSync(path.resolve(__dirname, 'src/content'), 'utf-8')
+const contentFiles = readdirSync(path.resolve(__dirname, 'src/contents'), 'utf-8')
 const inputs = contentFiles.map((file) => ({
-  path: path.resolve(__dirname, `src/content/${file}`),
+  path: path.resolve(__dirname, `src/contents/${file}`),
   name: file,
 }))
 

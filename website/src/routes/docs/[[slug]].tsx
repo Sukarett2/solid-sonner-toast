@@ -1,7 +1,7 @@
 import TableOfContents from '~/components/table-of-contents'
 import type { MDXData } from '~/typing/mdx'
 
-import { Match, Show, Switch, createSignal } from 'solid-js'
+import { Show, createSignal } from 'solid-js'
 import { Fragment } from 'solid-jsx'
 
 import { Navigate, type RouteDefinition, RouteSectionProps, createAsync } from '@solidjs/router'
