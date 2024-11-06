@@ -233,7 +233,7 @@ const Toast: Component<ToastProps> = (props) => {
         fallback={
           <>
             <Show when={toast().icon || getIcon(toast().type) || toast().promise}>
-              <div data-icon>
+              <div data-icon class={cn(props.classNames?.icon)}>
                 <Show when={(toast().promise || loading()) && !toast().icon}>
                   {props.loadingIcon ? (
                     <div class="loader" data-visible={loading()}>
@@ -246,7 +246,7 @@ const Toast: Component<ToastProps> = (props) => {
                 <Dynamic component={toast().icon ? () => toast().icon : getIcon(toast().type)} />
               </div>
             </Show>
-            <div data-content>
+            <div data-content class={cn(props.classNames?.content)}>
               <div data-title class={cn(props.classNames?.title, toast().classNames?.title)}>
                 {toast().title}
               </div>

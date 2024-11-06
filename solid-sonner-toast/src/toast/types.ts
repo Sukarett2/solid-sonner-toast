@@ -78,6 +78,8 @@ export interface ToastClassnames {
   info?: string
   warning?: string
   default?: string
+  content?: string
+  icon?: string
 }
 
 interface ToastOptions {
